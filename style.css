@@ -1,0 +1,84 @@
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right top, red, blueviolet);
+}
+.wrapper {
+  max-width: 400px;
+  width: 100%;
+  /* background-color: #fff; */
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+.cercles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.cercles .cercle {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 20px;
+  border: 3px solid #000;
+}
+.cercles .cercle.active {
+  color: green;
+  border: 3px solid blueviolet;
+}
+.cercles .progress_bar {
+  position: absolute;
+  width: 99.9%;
+  height: 5px;
+  background-color: #fff;
+  z-index: -1;
+}
+.progress_bar .bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: blueviolet;
+}
+.btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.btns button {
+  padding: 6px 10px;
+  border-radius: 8px;
+  background-color: blueviolet;
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btns button:hover {
+  transform: scale(0.9);
+  opacity: 0.5;
+}
